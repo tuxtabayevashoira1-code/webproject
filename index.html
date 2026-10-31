@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mening Portfoliom</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#3b82f6',
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Font Awesome ikonkalari -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300 font-sans">
+
+  <!-- 1. HEADER / NAVBAR -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-gray-900/80 border-b border-gray-200 dark:border-gray-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold tracking-tight text-brand">DevPortfolio<span class="text-blue-500">.</span></a>
+
+      <!-- Desktop Menyu -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#about" class="hover:text-brand transition-colors">Haqimda</a>
+        <a href="#skills" class="hover:text-brand transition-colors">Ko'nikmalar</a>
+        <a href="#projects" class="hover:text-brand transition-colors">Loyihalar</a>
+        <a href="#contact" class="hover:text-brand transition-colors">Aloqa</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <!-- Dark/Light Rejim Tugmasi -->
+        <button id="theme-toggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-brand transition-colors">
+          <i id="theme-toggle-dark-icon" class="fa-solid fa-moon hidden"></i>
+          <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden"></i>
+        </button>
+
+        <!-- Mobil Menyu Tugmasi -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobil Menyu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 border-b border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+      <a href="#about" class="block py-2 text-sm hover:text-brand">Haqimda</a>
+      <a href="#skills" class="block py-2 text-sm hover:text-brand">Ko'nikmalar</a>
+      <a href="#projects" class="block py-2 text-sm hover:text-brand">Loyihalar</a>
+      <a href="#contact" class="block py-2 text-sm hover:text-brand">Aloqa</a>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 flex flex-col items-center text-center">
+    <div class="w-28 h-28 md:w-36 md:h-36 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-600 p-1 mb-8 shadow-xl">
+      <img src="https://via.placeholder.com/150" alt="Avatar" class="w-full h-full object-cover rounded-full bg-white dark:bg-gray-800">
+    </div>
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+      Salom, men <span class="text-brand">Ismingiz</span>
+    </h1>
+    <p class="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-400 mb-6">
+      Frontend Dasturchi & UI/UX Ishqibozi
+    </p>
+    <p class="max-w-2xl text-gray-500 dark:text-gray-400 mb-8 leading-relaxed">
+      Zamonaviy, tezkor va foydalanuvchilar uchun qulay bo'lgan veb-saytlar va ilovalarni yarataman. Kod yozish va yangi texnologiyalarni o'rganish mening ishtiyoqim.
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center">
+      <a href="#projects" class="px-6 py-3 rounded-lg bg-brand text-white font-medium hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/25">
+        Ishlarimni ko'rish
+      </a>
+      <a href="#contact" class="px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-700 font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-all">
+        Bog'lanish
+      </a>
+    </div>
+  </section>
+
+  <!-- 3. ABOUT ME & SKILLS -->
+  <section id="about" class="py-20 bg-gray-100/50 dark:bg-gray-800/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Men haqimda</h2>
+        <div class="w-12 h-1 bg-brand mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
+          <p>
+            Men dasturlash sohasida 2 yildan ortiq tajribaga ega front-end dasturchiman. Murakkab muammolarga sodda va chiroyli yechimlar topishni yoqtiraman.
+          </p>
+          <p>
+            Loyiha ustida ishlashda koding tozaligi, moslashuvchanligi va tezligiga alohida e'tibor qarataman. Har bir yangi loyiha men uchun o'sish imkoniyatidir.
+          </p>
+        </div>
+
+        <!-- Skills list -->
+        <div id="skills" class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center justify-center gap-2 hover:scale-105 transition-transform">
+            <i class="fa-brands fa-html5 text-3xl text-orange-500"></i>
+            <span class="text-sm font-semibold">HTML5</span>
+          </div>
+          <div class="p-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center justify-center gap-2 hover:scale-105 transition-transform">
+            <i class="fa-brands fa-css3-alt text-3xl text-blue-500"></i>
+            <span class="text-sm font-semibold">CSS3</span>
+          </div>
+          <div class="p-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center justify-center gap-2 hover:scale-105 transition-transform">
+            <i class="fa-brands fa-js text-3xl text-yellow-400"></i>
+            <span class="text-sm font-semibold">JavaScript</span>
+          </div>
+          <div class="p-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center justify-center gap-2 hover:scale-105 transition-transform">
+            <i class="fa-brands fa-react text-3xl text-cyan-400"></i>
+            <span class="text-sm font-semibold">React</span>
+          </div>
+          <div class="p-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center justify-center gap-2 hover:scale-105 transition-transform">
+            <i class="fa-solid fa-code text-3xl text-teal-400"></i>
+            <span class="text-sm font-semibold">Tailwind CSS</span>
+          </div>
+          <div class="p-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col items-center justify-center gap-2 hover:scale-105 transition-transform">
+            <i class="fa-brands fa-git-alt text-3xl text-red-500"></i>
+            <span class="text-sm font-semibold">Git & GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PROJECTS SECTION -->
+  <section id="projects" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-4">Loyihalarim</h2>
+        <div class="w-12 h-1 bg-brand mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card 1 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-xl transition-shadow flex flex-col">
+          <img src="https://via.placeholder.com/400x225" alt="Loyiha 1" class="w-full h-48 object-cover">
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold mb-2">E-Commerce Veb-sayt</h3>
+              <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">
+                Onlayn do'kon uchun qidiruv va savat funksiyalariga ega zamonaviy interfeys.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-900/30 text-brand text-xs font-medium rounded-md">HTML</span>
+                <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-900/30 text-brand text-xs font-medium rounded-md">Tailwind</span>
+                <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-900/30 text-brand text-xs font-medium rounded-md">JS</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-sm font-medium">
+              <a href="#" class="text-brand hover:underline flex items-center gap-1">Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+              <a href="#" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 flex items-center gap-1">Kod <i class="fa-brands fa-github text-xs"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-xl transition-shadow flex flex-col">
+          <img src="https://via.placeholder.com/400x225" alt="Loyiha 2" class="w-full h-48 object-cover">
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Ob-havo Ilovasi</h3>
+              <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">
+                OpenWeather API orqali real vaqtdagi ob-havo ma'lumotlarini ko'rsatuvchi ilova.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-900/30 text-brand text-xs font-medium rounded-md">React</span>
+                <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-900/30 text-brand text-xs font-medium rounded-md">API</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-sm font-medium">
+              <a href="#" class="text-brand hover:underline flex items-center gap-1">Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+              <a href="#" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 flex items-center gap-1">Kod <i class="fa-brands fa-github text-xs"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-xl transition-shadow flex flex-col">
+          <img src="https://via.placeholder.com/400x225" alt="Loyiha 3" class="w-full h-48 object-cover">
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold mb-2">Vazifalar Boshqaruvi (Task App)</h3>
+              <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">
+                Kunlik vazifalarni rejalashtirish va kuzatib borish uchun qulay veb-ilova.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-900/30 text-brand text-xs font-medium rounded-md">JavaScript</span>
+                <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-900/30 text-brand text-xs font-medium rounded-md">LocalStorage</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 text-sm font-medium">
+              <a href="#" class="text-brand hover:underline flex items-center gap-1">Demo <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i></a>
+              <a href="#" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 flex items-center gap-1">Kod <i class="fa-brands fa-github text-xs"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CONTACT SECTION -->
+  <section id="contact" class="py-20 bg-gray-100/50 dark:bg-gray-800/50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">Bog'lanish</h2>
+        <div class="w-12 h-1 bg-brand mx-auto rounded-full mb-4"></div>
+        <p class="text-gray-500 dark:text-gray-400">Biror taklifingiz bor yoki birga ishlamoqchimisiz? Xabar qoldiring!</p>
+      </div>
+
+      <form class="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm" onsubmit="event.preventDefault();">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-medium mb-2">Ismingiz</label>
+            <input type="text" placeholder="Ali Valiyev" class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent focus:outline-none focus:border-brand">
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-2">Emailingiz</label>
+            <input type="email" placeholder="example@gmail.com" class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent focus:outline-none focus:border-brand">
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-2">Xabaringiz</label>
+          <textarea rows="4" placeholder="Xabaringizni shu yerga yozing..." class="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-transparent focus:outline-none focus:border-brand"></textarea>
+        </div>
+        <button type="submit" class="w-full py-3 rounded-lg bg-brand text-white font-medium hover:bg-blue-600 transition-colors">
+          Xabarni yuborish
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 6. FOOTER -->
+  <footer class="border-t border-gray-200 dark:border-gray-800 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-gray-500 dark:text-gray-400">
+        &copy; 2026 DevPortfolio. Barcha huquqlar himoyalangan.
+      </p>
+
+      <!-- Social Links -->
+      <div class="flex items-center gap-6">
+        <a href="#" class="text-gray-400 hover:text-brand transition-colors text-xl"><i class="fa-brands fa-github"></i></a>
+        <a href="#" class="text-gray-400 hover:text-brand transition-colors text-xl"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#" class="text-gray-400 hover:text-brand transition-colors text-xl"><i class="fa-brands fa-telegram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS SCRIPT -->
+  <script>
+    // Theme Switcher Logikasi
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+    if (document.documentElement.classList.contains('dark')) {
+      lightIcon.classList.remove('hidden');
+    } else {
+      darkIcon.classList.remove('hidden');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      darkIcon.classList.toggle('hidden');
+      lightIcon.classList.toggle('hidden');
+    });
+
+    // Mobil Menyu Logikasi
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
